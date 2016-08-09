@@ -1,0 +1,35 @@
+{
+  "name": "nodejs-support-dates.js",
+  "version": "1.0.0",
+  "description": "calculate planned Node.js support windows based on LTS plans",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "eslint": "eslint --fix --cache .",
+    "flow_check": "flow check || exit 0",
+    "fixpack": "fixpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jokeyrhyme/nodejs-support-dates.js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jokeyrhyme/nodejs-support-dates.js/issues"
+  },
+  "homepage": "https://github.com/jokeyrhyme/nodejs-support-dates.js#readme",
+  "engines": {
+    "node": ">=0.12",
+    "npm": ">=2"
+  },
+  "devDependencies": {
+    "eslint": "^3.2.2",
+    "eslint-config-standard": "^5.3.5",
+    "eslint-plugin-promise": "^2.0.1",
+    "eslint-plugin-standard": "^2.0.0",
+    "fixpack": "^2.3.1",
+    "flow-bin": "^0.30.0"
+  }
+}
