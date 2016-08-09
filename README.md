@@ -16,6 +16,8 @@ The behaviour of this project is based upon:
 
 - change logs for previous releases: https://github.com/nodejs/node/blob/master/doc/changelogs/
 
+The purpose of this project is to allow other tools to make useful and accurate recommendations to Node.js users.
+
 
 ## Usage
 
