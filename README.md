@@ -29,7 +29,7 @@ The purpose of this project is to allow other tools to make useful and accurate 
 
 - version: number (major version) | string (e.g. `"1.2.3"`)
 
-- returns: `{ release: '...', maintenance: '...', end: '...' }` (ISO8601 string values)
+- returns: `{ release: '...', end: '...' }` (ISO8601 string values)
 
 
 #### `majorVersionFromDate (date)`
