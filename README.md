@@ -66,5 +66,4 @@ var ltsFromDate = require('nodejs-support-dates').ltsFromDate
 
 ltsFromDate('2016-04-01') // => 6
 ltsFromDate(new Date()) // => 6
-
 ```
