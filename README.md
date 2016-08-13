@@ -29,16 +29,42 @@ The purpose of this project is to allow other tools to make useful and accurate 
 
 - version: number (major version) | string (e.g. `"1.2.3"`)
 
-- returns: `{ release: '...', end: '...' }` (ISO8601 string values)
+- returns: `{ release: '...', end: '...' }` (values are `Date`s)
 
 This will return accurate dates for versions listed at: https://github.com/nodejs/LTS
 
-Other versions will result in incorrect dates in the past,
+Other versions will result in incorrect dates set in the distant past,
 as this is sufficient for the primary purpose of this library.
 
+Example:
 
-#### `majorVersionFromDate (date)`
+```js
+var datesFromVersion = require('nodejs-support-dates').datesFromVersion
+
+JSON.stringify(datesFromVersion(process.version), null, 2)
+/* if run within Node.js 6.x, will return
+{
+  "release": "2016-04-01T00:00:00.000Z",
+  "end": "2019-04-01T00:00:00.000Z"
+}
+*/
+
+// example uses `JSON.stringify()` to more easily illustrate the `Date` values
+```
+
+
+#### `ltsFromDate (date)`
 
 - date: string (ISO8601) | `Date`
 
-- returns: number
+- returns: number (major version)
+
+Example:
+
+```js
+var ltsFromDate = require('nodejs-support-dates').ltsFromDate
+
+ltsFromDate('2016-04-01') // => 6
+ltsFromDate(new Date()) // => 6
+
+```
