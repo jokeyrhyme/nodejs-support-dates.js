@@ -31,6 +31,11 @@ The purpose of this project is to allow other tools to make useful and accurate 
 
 - returns: `{ release: '...', end: '...' }` (ISO8601 string values)
 
+This will return accurate dates for versions listed at: https://github.com/nodejs/LTS
+
+Other versions will result in incorrect dates in the past,
+as this is sufficient for the primary purpose of this library.
+
 
 #### `majorVersionFromDate (date)`
 
