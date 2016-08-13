@@ -2,5 +2,8 @@
   "extends": [
     "eslint:recommended",
     "standard"
-  ]
+  ],
+  "parserOptions": {
+    "ecmaVersion": 5
+  }
 }

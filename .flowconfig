@@ -1,2 +1,3 @@
 [ignore]
+.*/coverage/.*
 .*/node_modules/\.cache/.*
