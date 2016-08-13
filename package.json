@@ -1,5 +1,5 @@
 {
-  "name": "nodejs-support-dates.js",
+  "name": "nodejs-support-dates",
   "description": "calculate planned Node.js support windows based on LTS plans",
   "version": "1.0.0",
   "bugs": {
