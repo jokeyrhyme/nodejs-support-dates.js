@@ -16,7 +16,7 @@
     "fixpack": "^2.3.1",
     "flow-bin": "^0.33.0",
     "istanbul": "0.4.5",
-    "tape": "4.6.1"
+    "tape": "4.6.2"
   },
   "engines": {
     "node": ">=0.12",
