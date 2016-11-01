@@ -4,6 +4,9 @@
 ## Unreleased
 
 
+## 1.0.2 - 2016-11-01
+
+
 ### Fixed
 
 -   move test files so `publish` does not include them
