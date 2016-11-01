@@ -1,9 +1,8 @@
-/* eslint-disable node/no-unpublished-require */
 'use strict'
 
 var test = require('tape')
 
-var ltsFromDate = require('./index.js').ltsFromDate
+var ltsFromDate = require('../lib/index.js').ltsFromDate
 
 var testCases = [
   { date: '2015-05-01', expected: 0 },

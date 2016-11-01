@@ -41,7 +41,7 @@
     "flow_check": "flow check",
     "istanbul": "istanbul check-coverage --branches 50 --functions 90 --lines 90 --statements 90",
     "posttest": "npm run eslint && npm run flow_check && npm run fixpack",
-    "tape": "istanbul cover node_modules/tape/bin/tape lib/**/*.test.js",
+    "tape": "istanbul cover node_modules/tape/bin/tape test/*.js",
     "test": "npm run tape && npm run istanbul"
   }
 }

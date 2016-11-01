@@ -1,10 +1,9 @@
 /* @flow */
-/* eslint-disable node/no-unpublished-require */
 'use strict'
 
 var test = require('tape')
 
-var datesFromVersion = require('./index.js').datesFromVersion
+var datesFromVersion = require('../lib/index.js').datesFromVersion
 
 var testCases = [
   { version: 0.10, expected: { release: '2013-03-12', end: '2016-10-01' } },

@@ -4,6 +4,11 @@
 ## Unreleased
 
 
+### Fixed
+
+-   move test files so `publish` does not include them
+
+
 ## 1.0.1 - 2016-11-01
 
 
