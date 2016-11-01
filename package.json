@@ -1,7 +1,7 @@
 {
   "name": "nodejs-support-dates",
   "description": "calculate planned Node.js support windows based on LTS plans",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Ron Waldon <jokeyrhyme@gmail.com> (https://github.com/jokeyrhyme)",
   "bugs": {
     "url": "https://github.com/jokeyrhyme/nodejs-support-dates.js/issues"
