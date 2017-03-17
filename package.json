@@ -16,7 +16,7 @@
     "eslint-plugin-promise": "^3.3.2",
     "eslint-plugin-standard": "^2.0.1",
     "fixpack": "^2.3.1",
-    "flow-bin": "^0.41.0",
+    "flow-bin": "^0.42.0",
     "istanbul": "^0.4.5",
     "tape": "^4.6.2"
   },
