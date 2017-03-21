@@ -11,7 +11,7 @@
   },
   "devDependencies": {
     "eslint": "^3.11.1",
-    "eslint-config-standard": "^6.2.1",
+    "eslint-config-standard": "^7.0.2",
     "eslint-plugin-node": "^4.0.0",
     "eslint-plugin-promise": "^3.3.2",
     "eslint-plugin-standard": "^2.0.1",
@@ -19,6 +19,9 @@
     "flow-bin": "^0.42.0",
     "istanbul": "^0.4.5",
     "tape": "^4.6.2"
+  },
+  "directories": {
+    "test": "test"
   },
   "engines": {
     "node": ">=0.12",
@@ -40,8 +43,8 @@
     "fixpack": "fixpack",
     "flow_check": "flow check",
     "istanbul": "istanbul check-coverage --branches 50 --functions 90 --lines 90 --statements 90",
-    "posttest": "npm run eslint && npm run flow_check && npm run fixpack",
-    "tape": "istanbul cover node_modules/tape/bin/tape test/*.js",
+    "pretest": "npm run fixpack",
+    "tape": "istanbul cover node_modules/tape/bin/tape test/index.js",
     "test": "npm run tape && npm run istanbul"
   }
 }
