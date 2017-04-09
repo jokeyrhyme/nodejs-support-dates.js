@@ -1,3 +1,4 @@
+/* @flow */
 'use strict'
 
 var test = require('tape')
@@ -18,6 +19,22 @@ test('isDateInSchedule() should be true', function (t) {
 })
 
 ;[
+  { input: 0.6, expected: false },
+  { input: '0.6.6', expected: false },
+  { input: 'v0.6.6', expected: false },
+  { input: 0.1, expected: true },
+  { input: '0.10.1', expected: true },
+  { input: 'v0.10.1', expected: true }
+].forEach(function (testCase) {
+  var desc = typeof testCase.input + ' ' + testCase.input
+  test('isVersionInSchedule() ' + desc, function (t) {
+    var result = lib.isVersionInSchedule(testCase.input, schedule)
+    t.equal(result, testCase.expected)
+    t.end()
+  })
+})
+
+;[
   { input: 0.1, expected: 'v0.10' },
   { input: '0.10.1', expected: 'v0.10' },
   { input: 'v0.10.1', expected: 'v0.10' },
@@ -35,3 +52,4 @@ test('isDateInSchedule() should be true', function (t) {
     t.end()
   })
 })
+
