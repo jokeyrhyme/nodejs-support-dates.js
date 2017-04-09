@@ -6,12 +6,12 @@ var test = require('tape')
 var datesFromVersion = require('../lib/index.js').datesFromVersion
 
 var testCases = [
-  { version: 0.10, expected: { start: '2013-03-12', release: '2013-03-12', end: '2016-10-01' } },
-  { version: '0.10.1', expected: { start: '2013-03-12', release: '2013-03-12', end: '2016-10-01' } },
-  { version: 'v0.10.1', expected: { start: '2013-03-12', release: '2013-03-12', end: '2016-10-01' } },
-  { version: 0.12, expected: { start: '2015-02-07', release: '2015-02-07', end: '2016-12-31' } },
-  { version: '0.12.1', expected: { start: '2015-02-07', release: '2015-02-07', end: '2016-12-31' } },
-  { version: 'v0.12.1', expected: { start: '2015-02-07', release: '2015-02-07', end: '2016-12-31' } },
+  { version: 0.10, expected: { start: '2013-03-11', release: '2013-03-11', end: '2016-10-31' } },
+  { version: '0.10.1', expected: { start: '2013-03-11', release: '2013-03-11', end: '2016-10-31' } },
+  { version: 'v0.10.1', expected: { start: '2013-03-11', release: '2013-03-11', end: '2016-10-31' } },
+  { version: 0.12, expected: { start: '2015-02-06', release: '2015-02-06', end: '2016-12-31' } },
+  { version: '0.12.1', expected: { start: '2015-02-06', release: '2015-02-06', end: '2016-12-31' } },
+  { version: 'v0.12.1', expected: { start: '2015-02-06', release: '2015-02-06', end: '2016-12-31' } },
   { version: 4, expected: { start: '2015-04-01', release: '2015-04-01', end: '2018-04-01' } },
   { version: '4.2.3', expected: { start: '2015-04-01', release: '2015-04-01', end: '2018-04-01' } },
   { version: 'v4.2.3', expected: { start: '2015-04-01', release: '2015-04-01', end: '2018-04-01' } },
@@ -32,7 +32,7 @@ function fromJSON (data /* : Object */) {
 }
 
 testCases.forEach(function (testCase) {
-  test('version = ' + testCase.version, function (t) {
+  test('datesFromVersion() ' + testCase.version, function (t) {
     var result = datesFromVersion(testCase.version)
     t.deepEqual(result, fromJSON(testCase.expected))
     t.end()

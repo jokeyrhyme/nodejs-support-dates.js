@@ -4,6 +4,11 @@
 ## Unreleased
 
 
+### Changed
+
+-   update internal data using [upstream JSON schedule](https://github.com/nodejs/LTS/blob/master/schedule.json)
+
+
 ### Deprecated
 
 -   I will remove the "release" property in a future release, so please transition your code to use the "start" property
