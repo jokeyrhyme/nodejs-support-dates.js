@@ -4,6 +4,11 @@
 ## Unreleased
 
 
+### Deprecated
+
+-   I will remove the "release" property in a future release, so please transition your code to use the "start" property
+
+
 ## 1.0.2 - 2016-11-01
 
 

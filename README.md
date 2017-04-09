@@ -12,9 +12,11 @@ The behaviour of this project is based upon:
 
 - upstream Node.js Long-Term Support schedule: https://github.com/nodejs/LTS
 
-- dates of previous releases: https://github.com/nodejs/node/releases
+-   dates of previous releases: https://github.com/nodejs/node/releases
 
-- change logs for previous releases: https://github.com/nodejs/node/blob/master/doc/changelogs/
+-   change logs for previous releases: https://github.com/nodejs/node/blob/master/doc/changelogs/
+
+-   official schedule in JSON format: https://github.com/nodejs/LTS/blob/master/schedule.json
 
 The purpose of this project is to allow other tools to make useful and accurate recommendations to Node.js users.
 
@@ -27,9 +29,9 @@ The purpose of this project is to allow other tools to make useful and accurate 
 
 #### `datesFromVersion (version)`
 
-- version: number (major version) | string (e.g. `"1.2.3"`)
+-   version: number (major version) | string (e.g. `"1.2.3"`)
 
-- returns: `{ release: '...', end: '...' }` (values are `Date`s)
+-   returns: `{ start: '...', release: '...', end: '...' }` (values are `Date`s)
 
 This will return accurate dates for versions listed at: https://github.com/nodejs/LTS
 
@@ -44,7 +46,8 @@ var datesFromVersion = require('nodejs-support-dates').datesFromVersion
 JSON.stringify(datesFromVersion(process.version), null, 2)
 /* if run within Node.js 6.x, will return
 {
-  "release": "2016-04-01T00:00:00.000Z",
+  "start": "2016-04-01T00:00:00.000Z", // recommended
+  "release": "2016-04-01T00:00:00.000Z", // deprecated
   "end": "2019-04-01T00:00:00.000Z"
 }
 */
@@ -52,12 +55,14 @@ JSON.stringify(datesFromVersion(process.version), null, 2)
 // example uses `JSON.stringify()` to more easily illustrate the `Date` values
 ```
 
+**DEPRECATION**: I will remove the "release" property in a future release, so please transition your code to use the "start" property
+
 
 #### `ltsFromDate (date)`
 
-- date: string (ISO8601) | `Date`
+-   date: string (ISO8601) | `Date`
 
-- returns: number (major version)
+-   returns: number (major version)
 
 Example:
 
