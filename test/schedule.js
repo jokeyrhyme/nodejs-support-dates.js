@@ -4,7 +4,8 @@
 var test = require('tape')
 
 var lib = require('../lib/schedule.js')
-var schedule = require('../lib/schedule.json')
+
+var schedule = lib.read()
 
 test('isDateInSchedule() should be false', function (t) {
   t.equal(lib.isDateInSchedule('2010-01-01', schedule), false)

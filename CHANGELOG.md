@@ -8,6 +8,8 @@
 
 -   update internal data using [upstream JSON schedule](https://github.com/nodejs/LTS/blob/master/schedule.json)
 
+-   document strategy and simplify / adjust code to match
+
 
 ### Deprecated
 

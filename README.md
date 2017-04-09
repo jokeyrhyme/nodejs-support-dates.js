@@ -72,3 +72,18 @@ var ltsFromDate = require('nodejs-support-dates').ltsFromDate
 ltsFromDate('2016-04-01') // => 6
 ltsFromDate(new Date()) // => 6
 ```
+
+
+## Strategy
+
+This package produces results according to the following priority:
+
+1.  refer to built-in schedule data within this package, unless this data is incomplete
+
+  -   `datesFromVersion()` considers this incomplete if the built-in schedule data does not contain a requested version
+
+  -   `ltsFromDate()` always considers this incomplete (for now)
+
+2.  use best-guess algorithms, based upon the general schedule pattern
+
+3.  if appropriate version metadata is still unavailable, then assume a fictional 1970s version of Node.js
