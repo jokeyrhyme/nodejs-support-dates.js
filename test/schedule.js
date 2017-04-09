@@ -16,3 +16,22 @@ test('isDateInSchedule() should be true', function (t) {
   t.equal(lib.isDateInSchedule(new Date('2015-01-01'), schedule), true)
   t.end()
 })
+
+;[
+  { input: 0.1, expected: 'v0.10' },
+  { input: '0.10.1', expected: 'v0.10' },
+  { input: 'v0.10.1', expected: 'v0.10' },
+  { input: 0.12, expected: 'v0.12' },
+  { input: '0.12.2', expected: 'v0.12' },
+  { input: 'v0.12.2', expected: 'v0.12' },
+  { input: 4, expected: 'v4' },
+  { input: 4.2, expected: 'v4' },
+  { input: '4.2', expected: 'v4' },
+  { input: 'v4.2.3', expected: 'v4' }
+].forEach(function (testCase) {
+  var desc = typeof testCase.input + ' ' + testCase.input
+  test('normalizeVersion() ' + desc, function (t) {
+    t.equal(lib.normalizeVersion(testCase.input), testCase.expected)
+    t.end()
+  })
+})
