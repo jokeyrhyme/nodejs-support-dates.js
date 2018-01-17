@@ -7,7 +7,7 @@
     "url": "https://github.com/jokeyrhyme/nodejs-support-dates.js/issues"
   },
   "dependencies": {
-    "semver": "^5.3.0"
+    "semver": "5.4.1"
   },
   "devDependencies": {
     "eslint": "^3.19.0",
