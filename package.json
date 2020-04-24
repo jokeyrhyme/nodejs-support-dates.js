@@ -19,7 +19,7 @@
     "fixpack": "^2.3.1",
     "flow-bin": "^0.101.0",
     "istanbul": "^0.4.5",
-    "tape": "^4.6.2"
+    "tape": "^5.0.0"
   },
   "directories": {
     "test": "test"
